@@ -9,6 +9,12 @@ html, body, #root {
   min-height: 100vh;
   width: 100%;
 }
+html, body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
 
 #root {
   display: flex;
