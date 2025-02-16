@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <script>
+        const pathParts = window.location.pathname.split('/');
+        const repoName = pathParts[1]; 
+        window.location = `/${repoName}/`; 
+    </script>
+</head>
+<body>
+</body>
+</html>
