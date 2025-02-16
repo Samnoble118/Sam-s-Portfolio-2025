@@ -6,9 +6,15 @@
 @import "skills";
 @import "contact";
 
+
 body {
     background: $gradient-bg;
     color: $text-primary;
     font-family: "Arial", sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
   }
   

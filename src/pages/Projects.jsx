@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import "../styles/_projects.scss"; 
+
 
 export default function Projects() {
   const [repos, setRepos] = useState([]);
@@ -27,19 +29,30 @@ export default function Projects() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="projects"> 
       <h1>My GitHub Projects</h1>
-      <div style={{ display: "grid", gap: "16px", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
-        {repos.map((repo) => (
-          <div key={repo.id} style={{ border: "1px solid #ccc", padding: "10px", borderRadius: "8px" }}>
-            <h2>{repo.name}</h2>
-            <p>{repo.description || "No description available"}</p>
-            <p>⭐ {repo.stargazers_count} | 🛠 {repo.language || "Unknown"}</p>
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-              View on GitHub
-            </a>
-          </div>
-        ))}
+      <div className="project-list"> 
+        {repos.map((repo) => {
+          const githubPagesUrl = `https://${repo.owner.login}.github.io/${repo.name}/`;
+
+          return (
+            <div key={repo.id} className="project-card"> 
+              <h2>{repo.name}</h2>
+              <p>{repo.description || "No description available"}</p>
+              <p>⭐ {repo.stargazers_count} | 🛠 {repo.language || "Unknown"}</p>
+              <div className="buttons"> 
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="btn github-btn">
+                  View on GitHub
+                </a>
+                {repo.has_pages && ( 
+                  <a href={githubPagesUrl} target="_blank" rel="noopener noreferrer" className="btn live-demo-btn">
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

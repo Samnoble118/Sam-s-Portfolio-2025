@@ -1,14 +1,68 @@
 @import "variables";
 @import "mixins";
 
+
 .projects {
   padding: 20px;
-  h2 {
+
+  h1 {
     text-align: center;
+    margin-bottom: 20px;
   }
+
   .project-list {
     @include flex-center;
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  .project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    background: $black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    color: white !important; 
+    cursor: pointer;
+  }
+  
+
+  .github-btn {
+    background: $blue !important;
+    color: #fff;
+    border: 1px solid $blue;
+  
+    &:hover {
+      background: $blue;
+    }
+  }
+  
+  .live-demo-btn {
+    background: $green !important;
+    color: #fff;
+    border: 1px solid $green;
+  
+    &:hover {
+      background: $green;
+    }
+  }
+  
 }
