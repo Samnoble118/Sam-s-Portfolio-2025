@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./mixins";
+
+
+.home {
+    text-align: center;
+    padding: 20px;
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    .portfolio-link {
+      color: $blue; 
+      font-weight: bold;
+      text-decoration: underline;
+      transition: color 0.3s ease-in-out;
+  
+      &:hover {
+        color: darken($blue, 10%);
+      }
+    }
+  }
+  
