@@ -1,0 +1,14 @@
+@import "variables";
+@import "globals";
+@import "mixins";
+@import "header";
+@import "projects";
+@import "skills";
+@import "contact";
+
+body {
+    background: $gradient-bg;
+    color: $text-primary;
+    font-family: "Arial", sans-serif;
+  }
+  

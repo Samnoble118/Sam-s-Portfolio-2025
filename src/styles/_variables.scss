@@ -1,0 +1,25 @@
+// Primary Colors
+$black: #121212;
+$white: #ffffff;
+$blue: #1E90FF;
+$red: #E63946; 
+
+// Gradient Background
+$gradient-bg: linear-gradient(135deg, $black 40%, #1a1a1a 100%);
+
+// Text Colors
+$text-primary: $white;
+$text-secondary: #cccccc; 
+
+// Button Colors
+$button-primary: $blue;
+$button-primary-hover: darken($blue, 10%);
+$button-danger: $red;
+$button-danger-hover: darken($red, 10%);
+
+// Borders & Shadows
+$border-color: rgba(255, 255, 255, 0.2);
+$box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+// Transitions
+$transition: all 0.3s ease-in-out;

@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+
+.projects {
+  padding: 20px;
+  h2 {
+    text-align: center;
+  }
+  .project-list {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
