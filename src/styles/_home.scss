@@ -1,32 +1,73 @@
-@import "./variables";
-@import "./mixins";
-
-
 .home {
-    text-align: center;
-    padding: 20px;
-    
+  color: white;
+  background-color: #0d0d0d;
+  padding: 2rem;
+  text-align: center;
+
+  .hero {
+    margin-bottom: 2rem;
     h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-  
-    p {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  
-    .portfolio-link {
-      color: $blue; 
+      font-size: 3rem;
       font-weight: bold;
-      text-decoration: underline;
-      transition: color 0.3s ease-in-out;
-  
+    }
+    .highlight {
+      color: #ff4c4c;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #b0b0b0;
+    }
+  }
+
+  .intro {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #d0d0d0;
+    a {
+      color: #4c9aff;
+      text-decoration: none;
       &:hover {
-        color: darken($blue, 10%);
+        text-decoration: underline;
       }
     }
   }
-  
+
+  .projects {
+    margin-top: 3rem;
+    h2 {
+      font-size: 2rem;
+      color: #ffcc00;
+    }
+
+    .project-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .project-card {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 300px;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease-in-out;
+
+      h3 {
+        color: #ff4c4c;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: #d0d0d0;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
